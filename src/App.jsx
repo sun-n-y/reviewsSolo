@@ -58,8 +58,8 @@ function App() {
               <FaChevronRight />
             </button>
           </div>
-          <button type="button" className="suprise-btn" onClick={randomPerson}>
-            suprise me
+          <button type="button" className="surprise-btn" onClick={randomPerson}>
+            surprise me
           </button>
         </div>
       </main>

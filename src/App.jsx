@@ -29,6 +29,13 @@ function App() {
     });
   };
 
+  const randomPerson = () => {
+    const randomIndex = Math.floor(Math.random() * people.length);
+    return setPerson(
+      randomIndex === person ? checkNumber(randomIndex + 1) : randomIndex
+    );
+  };
+
   const { id, name, job, image, text } = people[person];
   return (
     <>
@@ -51,6 +58,9 @@ function App() {
               <FaChevronRight />
             </button>
           </div>
+          <button type="button" className="suprise-btn" onClick={randomPerson}>
+            suprise me
+          </button>
         </div>
       </main>
     </>

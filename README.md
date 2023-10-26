@@ -5,10 +5,11 @@
 ## Concepts applied but not limited too
 
 - ### vite + react
-- ### useState
-- ### useEffect
-- ### render components
-- ### destructure objects
 - ### import local data
+- ### useState
+- ### destructure objects
+- ### render components
+- ### react icons
+- ### index css
 
 [Back to Top](#custom_anchor_name)

@@ -3,6 +3,32 @@ import { useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 function App() {
   const [person, setPerson] = useState(0);
+
+  const checkNumber = (number) => {
+    if (number > people.length - 1) {
+      return 0;
+    }
+
+    if (number < 0) {
+      return people.length - 1;
+    }
+    return number;
+  };
+
+  const nextPerson = () => {
+    setPerson((old) => {
+      const newIndex = old + 1;
+      return checkNumber(newIndex);
+    });
+  };
+
+  const prevPerson = () => {
+    setPerson((old) => {
+      const newIndex = old - 1;
+      return checkNumber(newIndex);
+    });
+  };
+
   const { id, name, job, image, text } = people[person];
   return (
     <>
@@ -18,10 +44,10 @@ function App() {
           <h3 className="person-job">{job}</h3>
           <p className="text">{text}</p>
           <div className="btn-container">
-            <button type="button" className="prev-btn">
+            <button type="button" className="prev-btn" onClick={prevPerson}>
               <FaChevronLeft />
             </button>
-            <button type="button" className="next-btn">
+            <button type="button" className="next-btn" onClick={nextPerson}>
               <FaChevronRight />
             </button>
           </div>

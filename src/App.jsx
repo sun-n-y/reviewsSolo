@@ -1,3 +1,4 @@
+import people from './data';
 function App() {
   return (
     <>
